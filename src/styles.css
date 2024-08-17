@@ -32,9 +32,16 @@ nav button{
     border:none;
     width: 100%;
     padding: 1rem;
+    cursor:pointer;
+
     
 }
+nav button:hover{
+    font-weight: 800;
+}
 nav p{
+    font-size: 1.4rem;
     font-weight: 600;
     text-align: center;
+
 }
