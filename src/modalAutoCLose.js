@@ -1,6 +1,6 @@
 
-export function modalAutoClose(e){
-    const dialogDimensions = modal.getBoundingClientRect()
+export function modalAutoClose(e,taskModal){
+    const dialogDimensions = taskModal.getBoundingClientRect()
    
     if (
       e.clientX < dialogDimensions.left ||
@@ -8,6 +8,6 @@ export function modalAutoClose(e){
       e.clientY < dialogDimensions.top ||
       e.clientY > dialogDimensions.bottom
     ) {
-      modal.close()
+      taskModal.close()
     }
 }

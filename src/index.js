@@ -1,8 +1,8 @@
 import "./styles.css";
-import { getNewProject } from "./getNewProject";
+import { getNewTask } from "./getNewTask";
 import { modalAutoClose } from "./modalAutoCLose";
 const addProjectButton=document.querySelector("#add");
-const modal=document.querySelector("#modal");
+const taskModal=document.querySelector("#task-modal");
 
-addProjectButton.addEventListener("click",getNewProject);
-modal.addEventListener("click",modalAutoClose);
+addProjectButton.addEventListener("click",getNewTask);
+taskModal.addEventListener("click",(e)=>modalAutoClose(e,taskModal));
