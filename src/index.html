@@ -15,30 +15,39 @@
             <button># Project 3</button>
             <button># Project 4</button>
             <button># Project 5</button>
-            <button id="add">+ Add Project +</button>
+            <button id="add-project-button">+ Add Project +</button>
         </div>
         </div>
-        <dialog id="task-modal">
-            <form id="task-form" >
-                <label for="title">Title</label>
-                <input type="text" name="title" id="ftitle">
-                <label for="description" >Description</label>
-                <input type="text" name="description" id="fdesc">
-                <label for="date">DueTime</label>
-                <input type="datetime-local" name="date" id="fdate">
-                <label for="priority">Priority</label>
-                <select name="priority">
-                    <option value="urgent">Urgent</option>
-                    <option value="normal">Normal</option>
-                    <option value="low">Low</option>
-                </select>
-                <button type="submit">Add Task</button>
-                <!--To ma być project a nie task rybciu ^^-->
-            </form>
-        </dialog>
+        
     </nav>
     <main>
 
     </main>
+    <dialog id="task-modal">
+        <form id="task-form" >
+            <label for="title">Title</label>
+            <input type="text" name="title" id="ftitle">
+            <label for="description" >Description</label>
+            <input type="text" name="description" id="fdesc">
+            <label for="date">DueTime</label>
+            <input type="datetime-local" name="date" id="fdate">
+            <label for="priority">Priority</label>
+            <select name="priority">
+                <option value="urgent">Urgent</option>
+                <option value="normal">Normal</option>
+                <option value="low">Low</option>
+            </select>
+            <button type="submit">Add Task</button>
+
+        </form>
+    </dialog>
+    <dialog id="project-modal">
+        <form id="project-form">
+            <label for="title">Title</label>
+            <input type="text" name="title">
+            <button type="submit" id="add-new-project"></button>
+
+        </form>
+    </dialog>
 </body>
 </html>

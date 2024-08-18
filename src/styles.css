@@ -45,13 +45,13 @@ nav p{
     text-align: center;
 
 }
-#modal{
+#task-modal{
     position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-#form{
+#task-form{
     display: flex;
     flex-direction: column;
 }
