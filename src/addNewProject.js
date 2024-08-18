@@ -6,6 +6,6 @@ export function addNewProject(title){
     projectList.push(project);
     
     displayProjects();
-    //tutaj coś do odświeżenia widoku projektów po dodaniu
+
 
 }
