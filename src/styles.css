@@ -33,12 +33,16 @@ main .title{
     padding: 3% 10%;
 }
 .add-task{
+    margin-top: 1%;
     font-size: 3rem;
     border: none;
     background-color: inherit;
-
-    
-
+}
+.add-task:hover{
+    background-color: white;
+    font-weight: 900;
+    border-radius: 10px;
+    cursor: pointer;
 }
 nav button{
     font-family: inherit;

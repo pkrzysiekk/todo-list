@@ -1,4 +1,4 @@
-import { Task } from "./list";
+import { Task } from "./task";
 
 export class Project{
     constructor(title){
