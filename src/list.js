@@ -8,6 +8,7 @@ export class Task{
     }
     setDone(){
         this.isDone=true;
+        
     }
     
 }

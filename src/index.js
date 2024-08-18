@@ -3,11 +3,12 @@ import { showTaskModal } from "./showTaskModal";
 import { modalAutoClose } from "./modalAutoCLose";
 import { showModalProject } from "./showModalProject";
 import { projectFormSubmit } from "./projectFormSubmit";
+var _ = require('lodash')
 const addProjectButton=document.querySelector("#add-project-button");
 const submitProjectButton=document.querySelector("#add-new-project");
 const taskModal=document.querySelector("#task-modal");
 const projectModal=document.querySelector("#project-modal")
-const projectList=[];
+
 
 
 addProjectButton.addEventListener("click",showModalProject);
