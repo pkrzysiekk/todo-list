@@ -1,7 +1,8 @@
 import { Task } from "./list";
 
 export class Project{
-    constructor(){
+    constructor(title){
+        this.title=title;
         this.projectList=[];
     }
     addToProject(task){
