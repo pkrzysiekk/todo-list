@@ -1,3 +1,4 @@
+import { changeTaskStatus } from "./changeTaskStatus";
 import { clearElement } from "./clearElement";
 
 export function displayTasks(project){
@@ -12,8 +13,8 @@ export function displayTasks(project){
         const checkbox = document.createElement('input');
         checkbox.classList.add("done-checkbox");
         checkbox.type='checkbox';
+        checkbox.addEventListener("click",(e)=>changeTaskStatus(e,task));
 
- 
         li.appendChild(checkbox);
         taskList.appendChild(li);
     });
