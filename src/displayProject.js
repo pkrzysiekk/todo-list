@@ -17,11 +17,11 @@ export function displayProject(project){
 
     const submitTaskButton=document.querySelector("#add-new-task");
 
- // Usuń wszystkie poprzednie event listenery (wszystkie w razie, gdyby było więcej)
- const newSubmitTaskButton = submitTaskButton.cloneNode(true);
- submitTaskButton.parentNode.replaceChild(newSubmitTaskButton, submitTaskButton);
+    //removing any other listener from previous clicking,fucked up
+    const newSubmitTaskButton = submitTaskButton.cloneNode(true);
+    submitTaskButton.parentNode.replaceChild(newSubmitTaskButton, submitTaskButton);
 
- // Dodaj nowy event listener
- newSubmitTaskButton.addEventListener("click", (e) => addNewTask(e, project));
+ 
+    newSubmitTaskButton.addEventListener("click", (e) => addNewTask(e, project));
 }
 

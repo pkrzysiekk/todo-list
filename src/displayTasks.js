@@ -5,10 +5,10 @@ export function displayTasks(project){
     const tasksDiv=document.querySelector(".tasks");
     clearElement(tasksDiv);
     clearElement(taskList);
-    project.projectTasks.forEach(element => {
+    project.projectTasks.forEach(task => {
         const li=document.createElement("li")
-        const liContext=element.title;
-        li.textContent=liContext;
+        li.innerHTML = `${task.title} Due Date: ${task.dueDate} <br> ${task.description}`;
+        li.classList.add(task.priority);
         taskList.appendChild(li);
     });
     tasksDiv.appendChild(taskList);
