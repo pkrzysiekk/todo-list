@@ -1,3 +1,4 @@
+import { displayTasks } from "./displayTasks";
 import { Task } from "./task";
 export function addNewTask(e,project){
 
@@ -9,6 +10,7 @@ export function addNewTask(e,project){
 
     let task=new Task(title,description,dueDate,priority);
     project.addToProject(task);
+    displayTasks(project);
     
 
 

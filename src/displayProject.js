@@ -11,15 +11,17 @@ export function displayProject(project){
     projectHeader.textContent=titleParagraphContent;
     addTaskButton.classList.add("add-task");
     addTaskButton.textContent="+";
+    addTaskButton.removeEventListener("click",showTaskModal);
     addTaskButton.addEventListener("click",showTaskModal);
     addTaskButtonDiv.appendChild(addTaskButton);
 
     const submitTaskButton=document.querySelector("#add-new-task");
 
-    submitTaskButton.addEventListener("click",(e)=>addNewTask(e,project));
- 
-   
-  
+ // Usuń wszystkie poprzednie event listenery (wszystkie w razie, gdyby było więcej)
+ const newSubmitTaskButton = submitTaskButton.cloneNode(true);
+ submitTaskButton.parentNode.replaceChild(newSubmitTaskButton, submitTaskButton);
 
-
+ // Dodaj nowy event listener
+ newSubmitTaskButton.addEventListener("click", (e) => addNewTask(e, project));
 }
+

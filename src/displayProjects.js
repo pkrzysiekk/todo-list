@@ -10,5 +10,6 @@ export function displayProjects(){
     projectButton.addEventListener("click",(e)=>openProject(e));
     buttonsDiv.appendChild(projectButton);
    })
+   
 
 }
