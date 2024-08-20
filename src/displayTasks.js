@@ -1,5 +1,6 @@
 import { changeTaskStatus } from "./changeTaskStatus";
 import { clearElement } from "./clearElement";
+import { deleteTask } from "./deleteTask";
 import { sortTasksByDate } from "./sortTasks";
 
 export function displayTasks(project){
@@ -24,7 +25,7 @@ export function displayTasks(project){
         }
 
         checkbox.addEventListener("click", (e) => changeTaskStatus(e, task));
-
+        deleteButton.addEventListener("click",()=>deleteTask(project,task));
         li.appendChild(deleteButton);
         li.appendChild(checkbox);
         taskList.appendChild(li);
