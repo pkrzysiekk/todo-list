@@ -31,6 +31,7 @@ main{
 main .title{
     text-decoration: underline;
     padding: 3% 10%;
+  
 }
 .add-task{
     margin-top: 1%;
@@ -129,4 +130,17 @@ li{
     justify-self: start;
     background-color: inherit;
     cursor: pointer;
+}
+.delete-project-button{
+    float: right;
+    background-color: inherit;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.delete-project-button:hover{
+    color: red;
+    border: 1px dotted black;
+    border-radius: 5px;
+  
 }
