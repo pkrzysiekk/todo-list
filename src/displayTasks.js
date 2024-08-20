@@ -13,6 +13,9 @@ export function displayTasks(project){
         li.innerHTML = `${task.title} Due Date: ${task.dueDate.toLocaleString()} <br> ${task.description}`;
         li.classList.add(task.priority);
         const checkbox = document.createElement('input');
+        const deleteButton=document.createElement("button");
+        deleteButton.innerText='X';
+        deleteButton.classList.add("delete-task");
         checkbox.classList.add("done-checkbox");
         checkbox.type='checkbox';
         if(task.isDone===true){
@@ -22,7 +25,7 @@ export function displayTasks(project){
 
         checkbox.addEventListener("click", (e) => changeTaskStatus(e, task));
 
-
+        li.appendChild(deleteButton);
         li.appendChild(checkbox);
         taskList.appendChild(li);
     });
